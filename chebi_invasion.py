@@ -21,11 +21,14 @@ def run_game():
     bullets = Group()
     # Создание пришельца.
     alien = Alien(ai_settings, screen)
+    # Создание флота пришельцев.
+    aliens = Group()
+    gf.create_fleet(ai_settings, screen, ship, aliens)
     # Запуск основного цикла игры.
     while True:
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
         gf.update_bullets(bullets)
         # Удаление пуль, вышедших за край экрана.
-        gf.update_screen(ai_settings, screen, ship, bullets, alien)
+        gf.update_screen(ai_settings, screen, ship, bullets, aliens)
 run_game()
