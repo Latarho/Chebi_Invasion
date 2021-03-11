@@ -11,6 +11,8 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         ship.moving_left = True
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, ship, bullets)
+    elif event.key == pygame.K_q:
+        sys.exit()
 
 def check_keyup_events(event, ship):
     """Реагирует на отпускание клавиш."""
@@ -31,14 +33,15 @@ def check_events(ai_settings, screen, ship, bullets):
         # Переместить корабль вправо.
         ship.rect.centerx += 1
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, bullets, alien):
     """Обновляет изображения на экране и отображает новый экран."""
     # При каждом проходе цикла перерисовывается экран.
     screen.fill(ai_settings.bg_color)
     # Все пули выводятся позади изображений корабля и пришельцев.
-    for bullet in bullets.sprites():
+    for bullet in bullets:
         bullet.draw_bullet()
     ship.blitme()
+    alien.blitme()
     # Отображение последнего прорисованного экрана.
     pygame.display.flip()
 
