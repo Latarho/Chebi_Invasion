@@ -12,3 +12,14 @@ In Chebi Invasion, a cheburashka is present at the bottom of the screen, which c
 - Right Arrow : Spaceship moves to the right.
 - Left Arrow  : Spaceship moves to the left.
 - Spacebar    : Spaceship shoots oranges.
+
+Objective of the game is stop the fleet of crocodiles gena from reachng the bottom of the screen and our spaceship, if any of these happens then the player loses the cheburashka. In the game player have three extra cheburashkas.
+
+# Requirements
+- Python 3.x
+- Pygame
+
+To play just run the alien_invasion.py and save our world from the aliens.
+
+# Reference
+- The "Python Crash Course" book by Eric Matthes.
