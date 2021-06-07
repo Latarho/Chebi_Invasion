@@ -5,7 +5,7 @@ class GameStats():
         """Инициализирует статистику."""
         self.ai_settings = ai_settings
         self.reset_stats()
-        # Игра Alien Invasion запускается в активном состоянии.
+        # Игра Chebi Invasion запускается в неактивном состоянии.
         self.game_active = True
 
     def reset_stats(self):
