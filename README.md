@@ -19,7 +19,7 @@ Objective of the game is stop the fleet of crocodiles gena from reachng the bott
 - Python 3.x
 - Pygame
 
-To play just run the alien_invasion.py and save our world from the aliens.
+To play just run the chebi_invasion.py and save our world from the aliens.
 
 # Reference
 - The "Python Crash Course" book by Eric Matthes.
