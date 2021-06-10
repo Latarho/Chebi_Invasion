@@ -6,6 +6,8 @@ class GameStats():
         self.ai_settings = ai_settings
         self.reset_stats()
         # Игра Chebi Invasion запускается в неактивном состоянии.
+        self.game_active = False
+        # Игра Chebi Invasion запускается в активном состоянии.
         self.game_active = True
 
     def reset_stats(self):

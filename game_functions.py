@@ -51,14 +51,14 @@ def check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bul
         # Указатель мыши скрывается.
         pygame.mouse.set_visible(False)
         # Сброс игровой статистики.
-        stats.reset.stats()
-    stats.game_active = True
-    # Очистка списков пришельцев и пуль.
-    aliens.empty()
-    bullets.empty()
-    # Создание нового флота и размещение корабля в центре.
-    create_fleet(ai_settings, screen, ship, aliens)
-    ship.center_ship()
+        stats.reset_stats()
+        stats.game_active = True
+        # Очистка списков пришельцев и пуль.
+        aliens.empty()
+        bullets.empty()
+        # Создание нового флота и размещение корабля в центре.
+        create_fleet(ai_settings, screen, ship, aliens)
+        ship.center_ship()
 
 
 def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button):
@@ -79,7 +79,7 @@ def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_bu
     pygame.display.flip()
 
 
-def update_bullets(ai_settings, screen, ship, aliens, bullets):
+def update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets):
     """Обновляет позиции пуль и уничтожает старые пули."""
     # Обновление позиций пуль.
     bullets.update()
@@ -87,13 +87,17 @@ def update_bullets(ai_settings, screen, ship, aliens, bullets):
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
-    check_bullet_alien_collisions(ai_settings, screen, ship, aliens, bullets)
+    check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens, bullets)
 
 
-def check_bullet_alien_collisions(ai_settings, screen, ship, aliens, bullets):
+def check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens, bullets):
     """Обработка коллизий пуль с пришельцами."""
     # Удаление пуль и пришельцев, участвующих в коллизиях.
-    collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
+    collisions = pygame.sprite.groupcollide(aliens, bullets, True, True)
+    if collisions:
+        for aliens in collisions.values():
+            stats.score += ai_settings.alien_points * len(aliens)
+    sb.prep_score()
     if len(aliens) == 0:
         # Уничтожение существующих пуль, повышение скорости и создание нового флота.
         bullets.empty()
