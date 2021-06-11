@@ -12,9 +12,9 @@ class Settings():
         self.ship_limit = 3
         # Параметры пули
         self.bullet_speed_factor = 2
-        self.bullet_width = 3
-        self.bullet_height = 15
-        self.bullet_color = 60, 60, 60
+        self.bullet_width = 10
+        self.bullet_height = 10
+        self.bullet_color = 255, 128, 0
         self.bullets_allowed = 3
         # Настройки пришельцев
         self.alien_speed_factor = 1
