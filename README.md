@@ -3,14 +3,12 @@
   <img src="img.PNG"  width=80%>
 </div>
 
-Objective: To improve my Python skills. 
-
-This is one of the favourite games of my childhood. 
-In this project I have used the Pygame package to develop a 2D game in which the aim is to shoot down a fleet of aliens as they drop down the screen, as the level increases in speed and difficulty also increases.
-
+# Chebi Invasion
+Chebi invasion is a clone of popular arcade game with same name.
+I created this game by following the "Python Crash Course" book. 
+The reason was to improve my python skills.
 
 # Introduction
-
 In Chebi Invasion, a cheburashka is present at the bottom of the screen, which can be controlled using arrow keys and spacebar.
 - Right Arrow : Spaceship moves to the right.
 - Left Arrow  : Spaceship moves to the left.
@@ -18,11 +16,17 @@ In Chebi Invasion, a cheburashka is present at the bottom of the screen, which c
 
 Objective of the game is stop the fleet of crocodiles gena from reachng the bottom of the screen and our spaceship, if any of these happens then the player loses the cheburashka. In the game player have three extra cheburashkas.
 
-# Requirements
-- Python 3.x
-- Pygame
+# Requeriments
+- [Python](https://www.python.org/) 3.x +
+- [Pygame](https://www.pygame.org/)
 
-To play just run the chebi_invasion.py and save our world from the crocodiles gena.
+# Cloning the Repository
+```
+$ git clone https://github.com/bryanlds/Alien-Invasion.git
 
-# Reference
-- The "Python Crash Course" book by Eric Matthes.
+$ cd Alien-Invasion
+
+# Running 
+
+```
+$ python alien_invasion.py
