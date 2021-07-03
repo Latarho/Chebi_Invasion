@@ -21,7 +21,7 @@ Objective of the game is stop the fleet of crocodiles gena from reachng the bott
 - [Pygame](https://www.pygame.org/)
 
 # Cloning the Repository
-```
+
 $ git clone https://github.com/bryanlds/Alien-Invasion.git
 
 $ cd Alien-Invasion
