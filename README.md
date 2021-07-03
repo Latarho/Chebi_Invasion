@@ -22,7 +22,7 @@ Objective of the game is stop the fleet of crocodiles gena from reachng the bott
 
 # Cloning the Repository
 
-$ git clone https://github.com/bryanlds/Alien-Invasion.git
+$ git clone https://github.com/Latarho/Chebi_Invasion.git
 
 $ cd Alien-Invasion
 
