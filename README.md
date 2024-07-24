@@ -29,4 +29,4 @@ $ cd Chebi_Invasion
 # Running 
 
 ```
-$ python alien_invasion.py
+$ python chebi_invasion.py
